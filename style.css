@@ -1,38 +1,44 @@
-
 body {
     background-color: #f5f0e1; 
     font-family: 'Times New Roman', serif;
     margin: 0;
-    padding-top: 50%;
+    /* padding-top: 50% yerine içeriği ortalamak için flex kullanalım */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh; 
 }
 
 h1 {
     color: goldenrod;
-    font-size: 110%;
+    /* font-size: 110% çok küçük kalabilir, 'em' veya 'px' daha iyidir */
+    font-size: 2rem; 
     text-shadow: 3px 3px 6px #555;
-margin: 0 0 20px 0;
+    margin: 0 0 20px 0;
     text-align: center;
 }
 
 h2 {
     color: black;
-    font-size: 41%;
+    font-size: 1.2rem; /* %41 çok küçük, okunmaz */
     margin: 0 0 40px 0;
     text-align: center;
 }
 
-.pkutu{
-width: 600px;
-padding: 25px;
-border: 3px solid#555;
-margin: 0 auto;
+.pkutu {
+    /* Sabit 600px yerine max-width kullanalım ki ekran daralınca o da daralsın */
+    max-width: 600px;
+    width: 90%; /* Mobilde ekranın %90'ını kaplasın */
+    padding: 25px;
+    border: 3px solid #555;
+    margin: 0 auto;
+    box-sizing: border-box; /* Padding'in genişliği bozmasını engeller */
 }
 
 p {
     text-align: center;
-    font-size: 30%;
+    font-size: 1rem; /* %30 okunmayacak kadar küçüktür */
 }
-
 
 
 /*Benim Yazdığım*\/*h1{
